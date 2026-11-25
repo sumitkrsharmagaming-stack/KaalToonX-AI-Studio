@@ -1,1 +1,62 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KaalToonX AI Studio</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090d18;color:white;font-family:Arial;padding:20px}
+.container{max-width:650px;margin:auto}
+h1{color:#a78bfa;text-align:center}
+p{color:#aaa;text-align:center}
+.box{background:#151c2d;padding:18px;border-radius:15px;margin-top:18px}
+label{display:block;margin:15px 0 8px}
+textarea,select{width:100%;padding:13px;border-radius:9px;background:#0b1220;color:white;border:1px solid #39445b;font-size:16px}
+textarea{height:160px;resize:vertical}
+button{width:100%;padding:15px;background:#7c3aed;color:white;border:0;border-radius:10px;font-size:17px;font-weight:bold;margin-top:20px}
+small{color:#aaa}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🎬 KaalToonX AI Studio</h1>
+<p>अपनी कहानी दो और AI से Animation बनवाओ</p>
+<div class="box">
+<h2>✨ Create Your Video</h2>
+<label>अपनी कहानी लिखें</label>
+<textarea id="story" placeholder="यहाँ अपनी पूरी कहानी लिखें..."></textarea>
+<label>वीडियो स्टाइल</label>
+<select id="style">
+<option>3D Animation</option>
+<option>2D Cartoon</option>
+<option>2D Anime</option>
+</select>
+<label>वीडियो की लंबाई</label>
+<select id="duration">
+<option>30-40 सेकंड</option>
+<option>1-3 मिनट</option>
+<option>5 मिनट</option>
+<option>10-15 मिनट</option>
+<option>20 मिनट</option>
+</select>
+<label>आवाज</label>
+<select id="voice">
+<option>Hindi Male Voice</option>
+<option>Hindi Female Voice</option>
+</select>
+<button onclick="generate()">Generate Video 🚀</button>
+<p id="status">AI वीडियो इंजन अगले चरण में जोड़ा जाएगा।</p>
+</div>
+</div>
+<script>
+function generate(){
+const story=document.getElementById('story').value.trim();
+if(!story){alert('पहले अपनी कहानी लिखें!');return;}
+document.getElementById('status').innerText='आपकी कहानी तैयार है। AI इंजन कनेक्ट करना बाकी है।';
+}
+</script>
+</body>
+</html>
+
